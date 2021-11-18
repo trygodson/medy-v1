@@ -1,0 +1,73 @@
+@import '../../EntryFile/sassVariables/_colors';
+
+nav.navbar {
+  .container-fluid {
+    width: 1200px;
+    margin: 20px auto;
+  }
+  .navbar-brand {
+    img {
+      width: 100px;
+      margin: 0 2rem;
+    }
+  }
+  .something {
+    display: flex;
+    justify-content: flex-end;
+    .navbar-nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .nav-link-wrapper {
+        position: relative;
+        overflow: hidden;
+        .nav-link {
+          color: black;
+          font-weight: 400;
+          font-size: 16px;
+          text-transform: uppercase;
+          margin: 0 1.2rem;
+          margin-right: 30px;
+        }
+        .active-line {
+          height: 1px;
+          background-color: red;
+          width: 60%;
+          margin-left: -150%;
+          transition: margin-left 0.5s ease-in-out;
+        }
+        &:hover {
+          .active-line {
+            margin-left: 25%;
+          }
+        }
+      }
+      .button-wrapper {
+        display: flex;
+        align-items: center;
+        .button {
+          outline: none;  
+          color: $primary_pink;
+          padding: 5px 22px;
+          margin-right: 10px;
+          border-radius: 13px;
+          border: 1px solid $primary_pink;
+          background-color: none;
+          font-weight: 600;
+          text-decoration: none;
+          font-size: 13px;
+          &.sign-up {
+            background-color: $primary_pink;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .something {
+      justify-content: flex-start !important;
+    }
+  }
+}

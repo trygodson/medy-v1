@@ -1,7 +1,7 @@
 import { lazy } from 'react';
-import LandingPage from '../pages/LandingPage/landingPage';
+// import LandingPage from '../pages/LandingPage/landingPage';
 
-// const LandingPage = lazy(() => import('../pages/LandingPage/landingPage'));
+const LandingPage = lazy(() => import('../pages/LandingPage/landingPage'));
 
 export const routes = [
   {
@@ -10,14 +10,14 @@ export const routes = [
     exact: true,
     guarded: false,
   },
-  //   {
-  //     path: '/login',
-  //     component: null,
-  //     guarded: false,
-  //   },
-  //   {
-  //     path: '/register',
-  //     component: null,
-  //     guarded: false,
-  //   },
+    {
+      path: '/login',
+      component: null,
+      guarded: false,
+    },
+    {
+      path: '/register',
+      component: null,
+      guarded: false,
+    },
 ];
