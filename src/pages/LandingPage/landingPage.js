@@ -1,6 +1,14 @@
 import { Fragment, useState, useRef } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { calenderIcon, chat, heroImage, location, logo, user } from '../../EntryFile/images';
+import {
+  calenderIcon,
+  chat,
+  findDoctor,
+  heroImage,
+  location,
+  logo,
+  user,
+} from '../../EntryFile/images';
 import { LandinPageRoute } from '../../EntryFile/LandingPageRoute';
 import { CustomNavlink } from '../../shared/components/navLink/navLink';
 import { MobileMenu } from './mobileMenu/mobileMenu';
@@ -133,12 +141,32 @@ const LandingPage = () => {
           <div className="quick-solution-top">
             <div className="quick-solution-top-text">
               <div className="underline"></div>
-              <h4>Quick Solution For Scheduling With Doctor</h4>
+              <h4>
+                Quick Solution For Scheduling
+                <br />
+                With Doctor
+              </h4>
             </div>
           </div>
           <div className="quick-solution-card-wrapper">
             <div className="quick-solution-card">
-              <img />
+              <img src={findDoctor} />
+              <h5>Find a Doctor</h5>
+              <p>
+                Feeling some kind of way and need medical attenttion? Type in your symptoms and find
+                a matching doctor!
+              </p>
+            </div>
+            <div className="quick-solution-card">
+              <img src={findDoctor} />
+              <h5>Find a Doctor</h5>
+              <p>
+                Feeling some kind of way and need medical attenttion? Type in your symptoms and find
+                a matching doctor!
+              </p>
+            </div>
+            <div className="quick-solution-card">
+              <img src={findDoctor} />
               <h5>Find a Doctor</h5>
               <p>
                 Feeling some kind of way and need medical attenttion? Type in your symptoms and find
@@ -148,6 +176,37 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      <section className="live-consultation">
+        <div className="live-consultation-lhs"></div>
+        <div className="live-consultation-rhs">
+          <div className="inner-wrapper">
+            <div className="underline"></div>
+            <h4>Live Consultation</h4>
+            <p>
+              Consult doctors online with our seamless Live Chat feature! E-Care allows you to get
+              in touch with a doctor online with our online chat feature. This way you can easily
+              get medical attention or advice on the hurry.
+            </p>
+            <button className="consult-button">consult a doctor now</button>
+          </div>
+        </div>
+      </section>
+      <section className="join-now">
+        <div className="join-now-lhs">
+          <div className="innner-wrapper">
+            <div className="underline"></div>
+            <h4>Are You A Doctor</h4>
+            <p>
+              Be a part of the next big thing in healthcare. Join us in our journey of
+              revolutionizing healthcare delivery by harnessing technology to help millions lead
+              healthier lives.
+            </p>
+            <button className="join-button">join us now</button>
+          </div>
+        </div>
+        <div className="join-now-rhs"></div>
+      </section>
+      <footer></footer>
     </Fragment>
   );
 };
