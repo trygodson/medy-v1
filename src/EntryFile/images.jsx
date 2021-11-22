@@ -1,4 +1,5 @@
 export { default as logo } from '../assets/images/logo.svg';
+export { default as logoWhite } from '../assets/icons/logoWhite.svg';
 export { default as fadedCircularBg } from '../assets/images/circular-image.png';
 export { default as heroImage } from '../assets/images/hero-image.png';
 export { default as calenderIcon } from '../assets/icons/calender.svg';

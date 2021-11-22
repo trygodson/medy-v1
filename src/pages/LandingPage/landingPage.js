@@ -7,6 +7,7 @@ import {
   heroImage,
   location,
   logo,
+  logoWhite,
   user,
 } from '../../EntryFile/images';
 import { LandinPageRoute } from '../../EntryFile/LandingPageRoute';
@@ -18,7 +19,7 @@ const LandingPage = () => {
   const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
 
   return (
-    <Fragment>
+    <Fragment className="fragment">
       <header>
         <nav className="navbar navbar-expand-lg ">
           <div className="container-fluid ">
@@ -148,8 +149,8 @@ const LandingPage = () => {
               </h4>
             </div>
           </div>
-          <div className="quick-solution-card-wrapper">
-            <div className="quick-solution-card">
+          <div className="row quick-solution-card-wrapper">
+            <div className="col-md-4 quick-solution-card">
               <img src={findDoctor} />
               <h5>Find a Doctor</h5>
               <p>
@@ -157,7 +158,7 @@ const LandingPage = () => {
                 a matching doctor!
               </p>
             </div>
-            <div className="quick-solution-card">
+            <div className="col-md-4 quick-solution-card">
               <img src={findDoctor} />
               <h5>Find a Doctor</h5>
               <p>
@@ -165,7 +166,7 @@ const LandingPage = () => {
                 a matching doctor!
               </p>
             </div>
-            <div className="quick-solution-card">
+            <div className="col-md-4 quick-solution-card">
               <img src={findDoctor} />
               <h5>Find a Doctor</h5>
               <p>
@@ -206,7 +207,77 @@ const LandingPage = () => {
         </div>
         <div className="join-now-rhs"></div>
       </section>
-      <footer></footer>
+      <section className="sponsors">
+        <div className="sponsors-wrapper"></div>
+      </section>
+      <footer>
+        <div className="footer-wrapper">
+          <div className="row">
+            <div className="col-lg-4 col-md-12">
+              <div>
+                <img src={logoWhite} />
+                <p>
+                  We are an e-care facility dedicated to bring portable healthcare to the society -
+                  its a way provide healthcare Anytime, Anywhere.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-8 col-md-12">
+              <div className="row">
+                <div className="col-lg-3 text-left">
+                  <h5>About</h5>
+                  <div>
+                    <a>About Us</a>
+                  </div>
+                  <div>
+                    <a>Blog</a>
+                  </div>
+                  <div>
+                    <a>FAQs</a>
+                  </div>
+                  <div>
+                    <a>Login</a>
+                  </div>
+                  <div>
+                    <a>Register</a>
+                  </div>
+                </div>
+                <div className="col-lg-3 my-3">
+                  <h5>Services</h5>
+                  <div>
+                    <a>Doctors</a>
+                  </div>
+                  <div>
+                    <a>Clinics</a>
+                  </div>
+                  <div>
+                    <a>Specialization</a>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <h5>Contact Us</h5>
+                  <div>
+                    <a mailto="">help@onemedy.com</a>
+                  </div>
+                  <div>
+                    <a tel="+2348035391954">+(234)803 539 1954</a>
+                  </div>
+                </div>
+                <div className="col-lg-3 my-2">
+                  <h5>Subscribe To Our Newsletter</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row footer-end">
+            <div className="col-sm-4 lhs">
+              <div>Terms and Condition</div>
+              <div>Privacy Policy</div>
+            </div>
+            <div className="col-sm-8 rhs">2021 OneMedy</div>
+          </div>
+        </div>
+      </footer>
     </Fragment>
   );
 };
